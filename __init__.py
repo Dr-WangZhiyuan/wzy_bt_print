@@ -1,6 +1,9 @@
 # wzy_bt_print/__init__.py
 
 def print_tree_helper(root, curr_index=0, index=False, delimiter='-'):
+    '''
+    helper function, abstract away. 
+    '''
     if root is None:
         return '', 0, 0, 0
 
@@ -52,12 +55,12 @@ def print_tree_helper(root, curr_index=0, index=False, delimiter='-'):
 
     return new_box, len(new_box[0]), new_root_start, new_root_end
 
-def print_tree(root):
+def print_tree_new(root):
     '''
     Input: a root node
     Output: a vertical binary tree printout,
             without rotating your stiff neck :)
-    - 4 Apr 2024, Dr.Z.Wang, at Singapore
+    - 4 Apr 2024, Dr.Z.Wang, in Singapore
     '''
     lines, *_ = print_tree_helper(root)
     for line in lines:
